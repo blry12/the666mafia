@@ -11,7 +11,7 @@ ADDONTITLE     = 'NXTFlix GUI WIZARD'
 BUILDERNAME    = 'NXTFlix'
 #########################Make sure to change the repo to yours!!!!
 EXCLUDES       = [ADDON_ID, 'roms', 'My_Builds', 'backupdir', 'script.module.kodi-six', 'script.module.six']
-BUILDFILE      = 'https://the666mafia.com/txt/nxt.xml'
+BUILDFILE      = 'https://the666mafia.com/txt/nxt.txt'
 UPDATECHECK    = 0
 APKFILE        = 'https://'
 YOUTUBETITLE   = 'FTG Help Videos' 
