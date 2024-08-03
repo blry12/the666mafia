@@ -11,7 +11,7 @@ ADDONTITLE     = 'The 666 Mafia GUI WIZARD'
 BUILDERNAME    = 'The 666 Mafia'
 #########################Make sure to change the repo to yours!!!!
 EXCLUDES       = [ADDON_ID, 'roms', 'My_Builds', 'backupdir', 'script.module.kodi-six', 'script.module.six']
-BUILDFILE      = 'https://the666mafia.com/repo/builds/txt/the666mafiabuilds.txt'
+BUILDFILE      = 'https://the666mafia.com/txt/builds.txt'
 UPDATECHECK    = 0
 APKFILE        = 'https://'
 YOUTUBETITLE   = 'FTG Help Videos' 
@@ -129,7 +129,7 @@ CONTACTFANART  = 'http://'
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE     = 'yes'
 # Url to wizard version
-WIZARDFILE     = 'https://the666mafia.com/repo/builds/txt/plugin.program.the666mafia.zip'
+WIZARDFILE     = 'https://the666mafia.com/builds/plugin.program.the666mafia.zip'
 #########################################################
 
 #########################################################
@@ -151,7 +151,7 @@ REPOZIPURL     =  'http://'
 # Enable Notification screen Yes or No
 ENABLE         = 'Yes'
 # Url to notification file
-NOTIFICATION   = 'https://the666mafia.com/repo/builds/txt/the666mafianotify.txt'
+NOTIFICATION   = 'https://the666mafia.com/txt/notify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE     = 'Text'
 # Font size of header
