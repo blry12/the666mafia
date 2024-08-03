@@ -10,7 +10,7 @@ ADDONTITLE     = '[COLOR white]-[B]Lady Guin GUI Builds Wizard[/B]-[/COLOR]'
 BUILDERNAME    = 'Lady Guin'
 #########################Make sure to change the repo to yours!!!!
 EXCLUDES       = [ADDON_ID, 'roms', 'My_Builds', 'backupdir', 'script.module.kodi-six', 'script.module.six']
-BUILDFILE      = 'https://the666mafia.com//repo/builds/txt/ladyguinbuilds.txt'
+BUILDFILE      = 'https://the666mafia.com/txt/ladyguinbuilds.txt'
 UPDATECHECK    = 0
 APKFILE        = 'http://'
 YOUTUBETITLE   = 'FTG Help Videos' 
@@ -129,7 +129,7 @@ CONTACTFANART  = 'http://'
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE     = 'yes'
 # Url to wizard version
-WIZARDFILE     = 'https://the666mafia.com//repo/builds/txt/plugin.program.ladyguinwiz.zip'
+WIZARDFILE     = 'https://the666mafia.com/wizards/plugin.program.ladyguinwiz.zip'
 #########################################################
 
 #########################################################
@@ -151,7 +151,7 @@ REPOZIPURL     =  'http://'
 # Enable Notification screen Yes or No
 ENABLE         = 'Yes'
 # Url to notification file
-NOTIFICATION   = 'https://raw.githubusercontent.com/LaughNow-CryLater/set.it.off.666/main/Ladyguin/ladynotify.txt'
+NOTIFICATION   = 'https://the666mafia.com/txt/ladynotify.txt'
 # Use either 'Text' or 'Image'
 HEADERTYPE     = 'Text'
 # Font size of header
