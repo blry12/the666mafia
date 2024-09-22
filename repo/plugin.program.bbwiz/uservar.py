@@ -72,7 +72,7 @@ VER_NUMBER_COLOR = 'black'
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
 COLOR1         = 'blue'
-COLOR2         = 'black'
+COLOR2         = 'red'
 COLOR3         = 'red'
 COLOR4         = 'snow'
 COLOR5         = 'lime'
