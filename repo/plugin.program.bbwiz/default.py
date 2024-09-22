@@ -299,7 +299,7 @@ def buildMenu():
 			return
 	addFile('%s Version: %s' % (MCNAME, KODIV), '', icon=ICONBUILDS, themeit=THEME3)
 	addDir ('Save Data Menu'       ,'savedata', icon=ICONSAVE,     themeit=THEME3)
-	addDir ('[COLOR yellow]---[B][COLOR lime]Addon Packs [COLOR blue]/ [COLOR red]Fixes[/COLOR][/B][COLOR black]---[/COLOR]'        ,'viewpack',   icon=ICONMAINT,   themeit=THEME1)
+	addDir ('[COLOR black]---[B][COLOR lime]Addon Packs [COLOR blue]/ [COLOR red]Fixes[/COLOR][/B][COLOR black]---[/COLOR]'        ,'viewpack',   icon=ICONMAINT,   themeit=THEME1)
 	if HIDESPACERS == 'No': addFile(wiz.sep(), '', themeit=THEME3)
 	if third == True:
 		for item in addin:
@@ -645,7 +645,7 @@ def APKSELECT2(url):
 def APKGRAB(name,url):
 	html=wiz.openURL(url)
 	name=name
-	match = re.compile('href="([^"]*)".+?lass="yellow_button".+?itle=').findall(html)
+	match = re.compile('href="([^"]*)".+?lass="black_button".+?itle=').findall(html)
 	for url in match:
 		url = 'https://www.apkfiles.com'+url
 		apkInstaller1(name,url)
