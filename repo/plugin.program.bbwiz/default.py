@@ -299,7 +299,7 @@ def buildMenu():
 			return
 	addFile('%s Version: %s' % (MCNAME, KODIV), '', icon=ICONBUILDS, themeit=THEME3)
 	addDir ('Save Data Menu'       ,'savedata', icon=ICONSAVE,     themeit=THEME3)
-	addDir ('[COLOR yellow]---[B][COLOR lime]Addon Packs [COLOR blue]/ [COLOR red]Fixes[/COLOR][/B][COLOR yellow]---[/COLOR]'        ,'viewpack',   icon=ICONMAINT,   themeit=THEME1)
+	addDir ('[COLOR yellow]---[B][COLOR lime]Addon Packs [COLOR blue]/ [COLOR red]Fixes[/COLOR][/B][COLOR black]---[/COLOR]'        ,'viewpack',   icon=ICONMAINT,   themeit=THEME1)
 	if HIDESPACERS == 'No': addFile(wiz.sep(), '', themeit=THEME3)
 	if third == True:
 		for item in addin:
@@ -427,7 +427,7 @@ def viewBuild(name):
 			else: warning = True
 		else: warning = False
 		if warning == True:
-			addFile('BUILD DESIGNED FOR KODI VERSION %s [COLOR yellow](INSTALLED: %s)[/COLOR]' % (str(kodi), str(KODIV)), '', fanart=fanart, icon=icon, themeit=THEME6)
+			addFile('BUILD DESIGNED FOR KODI VERSION %s [COLOR black](INSTALLED: %s)[/COLOR]' % (str(kodi), str(KODIV)), '', fanart=fanart, icon=icon, themeit=THEME6)
 		addFile(wiz.sep('INSTALL'), '', fanart=fanart, icon=icon, themeit=THEME3)
 		addFile('Fresh Start then Install'   , 'install', name, 'fresh'  , description=description, fanart=fanart, icon=icon, themeit=THEME1)
 		addFile('Standard Install', 'install', name, 'normal' , description=description, fanart=fanart, icon=icon, themeit=THEME1)
@@ -666,9 +666,9 @@ def emumenu():
 			for name, url, icon, fanart in match:
 				addFile(name, 'apkinstall', name, url, icon=icon, fanart=fanart, themeit=THEME1)
 		elif wiz.platform() == 'windows':
-			DIALOG.ok(ADDONTITLE, "[COLOR yellow]Please go download RetroArch for PC[/COLOR]\nGoto http://tinyurl.com/RetroFTG for a full tutorial")
+			DIALOG.ok(ADDONTITLE, "[COLOR black]Please go download RetroArch for PC[/COLOR]\nGoto http://tinyurl.com/RetroFTG for a full tutorial")
 		elif wiz.platform() == 'linux':
-			DIALOG.ok(ADDONTITLE, "[COLOR yellow]Please go download RetroArch for PC[/COLOR]\nGoto http://tinyurl.com/RetroFTG for a full tutorial")
+			DIALOG.ok(ADDONTITLE, "[COLOR black]Please go download RetroArch for PC[/COLOR]\nGoto http://tinyurl.com/RetroFTG for a full tutorial")
 def rompackmenu():
 	link = wiz.openURL(ROMPACK).replace('\n','').replace('\r','').replace('\t','')
 	match = re.compile('name="(.+?)".+?rl="(.+?)".+?con="(.+?)".+?anart="(.+?)"').findall(link)
@@ -1545,7 +1545,7 @@ def removeAddonDataMenu():
 			icon = os.path.join(folder.replace(ADDOND, ADDONS), 'icon.png')
 			fanart = os.path.join(folder.replace(ADDOND, ADDONS), 'fanart.png')
 			folderdisplay = foldername
-			replace = {'audio.':'[COLOR orange][AUDIO] [/COLOR]', 'metadata.':'[COLOR cyan][METADATA] [/COLOR]', 'module.':'[COLOR orange][MODULE] [/COLOR]', 'plugin.':'[COLOR blue][PLUGIN] [/COLOR]', 'program.':'[COLOR orange][PROGRAM] [/COLOR]', 'repository.':'[COLOR gold][REPO] [/COLOR]', 'script.':'[COLOR green][SCRIPT] [/COLOR]', 'service.':'[COLOR green][SERVICE] [/COLOR]', 'skin.':'[COLOR dodgerblue][SKIN] [/COLOR]', 'video.':'[COLOR orange][VIDEO] [/COLOR]', 'weather.':'[COLOR yellow][WEATHER] [/COLOR]'}
+			replace = {'audio.':'[COLOR orange][AUDIO] [/COLOR]', 'metadata.':'[COLOR cyan][METADATA] [/COLOR]', 'module.':'[COLOR orange][MODULE] [/COLOR]', 'plugin.':'[COLOR blue][PLUGIN] [/COLOR]', 'program.':'[COLOR orange][PROGRAM] [/COLOR]', 'repository.':'[COLOR gold][REPO] [/COLOR]', 'script.':'[COLOR green][SCRIPT] [/COLOR]', 'service.':'[COLOR green][SERVICE] [/COLOR]', 'skin.':'[COLOR dodgerblue][SKIN] [/COLOR]', 'video.':'[COLOR orange][VIDEO] [/COLOR]', 'weather.':'[COLOR black][WEATHER] [/COLOR]'}
 			for rep in replace:
 				folderdisplay = folderdisplay.replace(rep, replace[rep])
 			if foldername in EXCLUDES: folderdisplay = '[COLOR green][B][PROTECTED][/B][/COLOR] %s' % folderdisplay

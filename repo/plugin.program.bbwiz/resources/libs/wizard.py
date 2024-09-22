@@ -426,7 +426,7 @@ def highlightText(msg):
 	for item in matches:
 		string = '-->Python callback/script returned the following error<--%s-->End of Python script error report<--' % item
 		msg    = msg.replace(string, '[COLOR red]%s[/COLOR]' % string)
-	msg = msg.replace('WARNING', '[COLOR yellow]WARNING[/COLOR]').replace('ERROR', '[COLOR red]ERROR[/COLOR]').replace('[NL]', '\n').replace(': EXCEPTION Thrown (PythonToCppException) :', '[COLOR red]: EXCEPTION Thrown (PythonToCppException) :[/COLOR]')
+	msg = msg.replace('WARNING', '[COLOR black]WARNING[/COLOR]').replace('ERROR', '[COLOR red]ERROR[/COLOR]').replace('[NL]', '\n').replace(': EXCEPTION Thrown (PythonToCppException) :', '[COLOR red]: EXCEPTION Thrown (PythonToCppException) :[/COLOR]')
 	msg = msg.replace('\\\\', '\\').replace(HOME, '')
 	return msg
 
@@ -924,7 +924,7 @@ def toggleDependency(name, DP=None):
 			if not 'xbmc.python' in depends:
 				dependspath=os.path.join(ADDONS, depends)
 				if not DP == None: 
-					DP.update(0,"Checking Dependency [COLOR yellow]%s[/COLOR] for [COLOR yellow]%s[/COLOR]" % (depends, name))
+					DP.update(0,"Checking Dependency [COLOR black]%s[/COLOR] for [COLOR black]%s[/COLOR]" % (depends, name))
 				if os.path.exists(dependspath):
 					toggleAddon(name, 'true')
 			xbmc.sleep(100)
@@ -1487,9 +1487,9 @@ def asciiCheck(use=None, over=False):
 			if use:
 				LogNotify("[COLOR %s]%s[/COLOR]" % (COLOR1, ADDONTITLE), "[COLOR %s]ASCII Check: %s Removed / %s Failed.[/COLOR]" % (COLOR2, f1, f2))
 			else:
-				TextBox(ADDONTITLE, "[COLOR yellow][B]%s Files Removed:[/B][/COLOR]\n %s\n\n[COLOR yellow][B]%s Files Failed:[B][/COLOR]\n %s" % (f1, msg, f2, msg2))
+				TextBox(ADDONTITLE, "[COLOR black][B]%s Files Removed:[/B][/COLOR]\n %s\n\n[COLOR black][B]%s Files Failed:[B][/COLOR]\n %s" % (f1, msg, f2, msg2))
 		else: 
-			TextBox(ADDONTITLE, "[COLOR yellow][B]%s Files Found:[/B][/COLOR]\n %s" % (f1, msg))
+			TextBox(ADDONTITLE, "[COLOR black][B]%s Files Found:[/B][/COLOR]\n %s" % (f1, msg))
 	else: LogNotify("[COLOR %s]%s[/COLOR]" % (COLOR1, ADDONTITLE), "[COLOR %s]ASCII Check: None Found.[/COLOR]" % COLOR2)
 
 def fileCount(home, excludes=True):

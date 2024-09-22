@@ -35,7 +35,7 @@ ART            = os.path.join(PATH, 'resources', 'art')
 # Only these colors avalable
 # white , blue , orange , yellow , red , purple , pink , lime , cyan, green
 #Button focus color
-FOCUS_BUTTON_COLOR = 'yellow'
+FOCUS_BUTTON_COLOR = 'black'
 EXIT_BUTTON_COLOR = 'red'
 #Highlight outline for lists
 HIGHLIGHT_LIST = 'button_focus'
@@ -47,24 +47,24 @@ NO_TXT_FILE = 'orange'
 ### The full list of colors for below can found @ https://forum.kodi.tv/showthread.php?tid=210837
 
 #Top Main buttons
-MAIN_BUTTONS_TEXT = 'yellow'
+MAIN_BUTTONS_TEXT = 'black'
 #All other buttons
-OTHER_BUTTONS_TEXT = 'yellow'
+OTHER_BUTTONS_TEXT = 'black'
 #all list text color
 ##FYI any color placed in the txt file will overide this
-LIST_TEXT = 'yellow'
+LIST_TEXT = 'black'
 
 
 #Description text title color
-DES_T_COLOR = 'yellow'
+DES_T_COLOR = 'black'
 #Description color
-DESCOLOR = 'yellow'
+DESCOLOR = 'black'
 
 #Wizard title name and verion color
 WIZTITLE = 'Bradleys Builds GUI WIZARD'
-WIZTITLE_COLOR = 'yellow'
-VERTITLE_COLOR = 'yellow'
-VER_NUMBER_COLOR = 'yellow'
+WIZTITLE_COLOR = 'black'
+VERTITLE_COLOR = 'black'
+VER_NUMBER_COLOR = 'black'
 ############################################################
 
 ## The colors and theme below is still used for the pop up dialogs

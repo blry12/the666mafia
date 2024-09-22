@@ -166,10 +166,10 @@ def autoConfig(msg='', TxtColor='0xFFFFFFFF', Font='font12', BorderWidth=10):
                 asreadfactor = ' = [B][COLOR lime]%s[/COLOR][/B]' % asreadfactor
                 asbuffer = ' = [B][COLOR lime]%s[/COLOR][/B]' % asbuffer
             else:
-                asvideocachevalue = ' : [COLOR yellow]20[/COLOR] MB'
-                ascurl = ' : [COLOR yellow]10[/COLOR]'
-                asreadfactor = ' : [COLOR yellow]4.0[/COLOR]'
-                asbuffer = ' : [COLOR yellow]0[/COLOR]'
+                asvideocachevalue = ' : [COLOR black]20[/COLOR] MB'
+                ascurl = ' : [COLOR black]10[/COLOR]'
+                asreadfactor = ' : [COLOR black]4.0[/COLOR]'
+                asbuffer = ' : [COLOR black]0[/COLOR]'
             buttonfocus, buttonnofocus = artwork('button')
             radiobgfocus, radiobgnofocus, radiofocus, radionofocus = artwork('radio')
             slidernibfocus, slidernibnofocus, sliderfocus, slidernofocus = artwork('slider')
