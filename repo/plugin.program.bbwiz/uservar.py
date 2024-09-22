@@ -33,7 +33,7 @@ ART            = os.path.join(PATH, 'resources', 'art')
 #### NEW GUI THEME ###################################
 # Choose from the following 
 # Only these colors avalable
-# white , blue , orange , yellow , red , purple , pink , lime , cyan, green
+# white , blue , orange , black , red , purple , pink , lime , cyan, green
 #Button focus color
 FOCUS_BUTTON_COLOR = 'black'
 EXIT_BUTTON_COLOR = 'red'
@@ -72,7 +72,7 @@ VER_NUMBER_COLOR = 'black'
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
 COLOR1         = 'blue'
-COLOR2         = 'yellow'
+COLOR2         = 'black'
 COLOR3         = 'red'
 COLOR4         = 'snow'
 COLOR5         = 'lime'

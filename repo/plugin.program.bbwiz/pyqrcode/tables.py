@@ -776,7 +776,7 @@ term_colors = {
     'black': 40,
     'red': 41,
     'green': 42,
-    'yellow': 43,
+    'black': 43,
     'blue': 44,
     'magenta': 45,
     'cyan': 46,
@@ -787,7 +787,7 @@ term_colors = {
     'light red': 101,
     'light green': 102,
     'light blue': 103,
-    'light yellow': 104,
+    'light black': 104,
     'light magenta': 105,
     'light cyan': 106,
     'white': 107

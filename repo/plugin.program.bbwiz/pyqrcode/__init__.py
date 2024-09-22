@@ -520,9 +520,9 @@ class QRCode:
         supported, is to use the 8 or 16 color scheme. This scheme uses
         eight to sixteen named colors. The following colors are
         supported the most widely supported: black, red, green,
-        yellow, blue, magenta, and cyan. There are an some additional
+        black, blue, magenta, and cyan. There are an some additional
         named colors that are supported by most terminals: light gray,
-        dark gray, light red, light green, light blue, light yellow,
+        dark gray, light red, light green, light blue, light black,
         light magenta, light cyan, and white.
 
         There are two special named colors. The first is the
