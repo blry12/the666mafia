@@ -1,32 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="plugin.program.breezzwizard" name="[COLORred]BReeZz Wizard[/COLOR]" version="1.1" provider-name="BReeZz">
-    <requires>
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.six" />
-        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
-        <import addon="script.speedtester" optional="true" version="1.1.2" />
-    </requires>
-    
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>executable</provides>
-    </extension>
-    
-    <extension point="xbmc.service" library="startup.py" start="startup" />
-    
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">[COLOR red]BReeZz Kodi Wizard[/COLOR] for Kodi</summary>
-        <description lang="en">[COLOR red]BReeZz Wizard[/COLOR] offers many maintenance features, selective add-on data saving, and a variety of builds.</description>
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <source />
-        <news />
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.png</fanart>
-        </assets>
-    </extension>
-</addon><addon id="plugin.program.darealist" name="[COLOR white]DAREALIST BUILDS WIZARD[/COLOR]" version="1.0" provider-name="Zippo">
+<addons><addon id="plugin.program.darealist" name="[COLOR white]DAREALIST BUILDS WIZARD[/COLOR]" version="1.0" provider-name="Zippo">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.six" />
@@ -114,6 +87,35 @@
 				<screenshot />
 		</assets>
   </extension>
+</addon><addon id="plugin.program.triple666mafia" name="[COLOR red]Triple 666 Mafia Wizard[/COLOR]" version="1.0" provider-name="Set.it.off.666">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Simple Wizard is a lightweight template for installing builds on Kodi. Has some code from Aftermath Wizard by Surfacingx. Skin Switch by OpenELEQ. Base code by BYB. Credits to them and all others who contributed. Please report any bugs to @slamious on Telegram/Twitter.</summary>
+		<description lang="en_GB">Kodi Wizard</description>
+		<disclaimer lang="en_GB">This Addon contains no content</disclaimer>
+		<language>en</language>
+		<platform>all</platform>
+		<license>GPL-2.0-or-later</license>
+		<forum />
+		<website /> 
+		<email />
+		<source />
+		<news />
+		<assets>
+				<icon>resources/icon.png</icon>
+				<fanart>resources/fanart.jpg</fanart>
+				<banner />
+				<clearlogo />
+				<screenshot />
+		</assets>
+	</extension>
 </addon><addon id="repository.the666mafia" name="[COLOR red]the666Mafia[/COLOR]" version="1.0" provider-name="the666Mafia">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
