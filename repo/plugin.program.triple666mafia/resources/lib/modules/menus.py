@@ -2,12 +2,11 @@ import sys
 import json
 import xbmc
 import xbmcplugin
+from uservar import buildfile, videos_url
 from .addonvar import addon_name
 from .utils import add_dir
-from .parser import Parser, XmlParser, TextParser, get_page
-from .dropbox import DownloadFile
-from uservar import buildfile, videos_url
-from .addonvar import addon_icon, addon_fanart, local_string, build_file, authorize
+from .parser import XmlParser, TextParser, get_page
+from .addonvar import addon_icon, addon_fanart, local_string, authorize
 from .colors import colors
 
 HANDLE = int(sys.argv[1])
@@ -37,38 +36,34 @@ def build_menu():
     xbmcplugin.setPluginCategory(HANDLE, local_string(30010))
     
     builds = []
-    if buildfile.startswith('https://www.dropbox.com'):
-        DownloadFile(buildfile, build_file)
-        try:
-            builds = json.load(open(build_file,'r')).get('builds')
-        except:
-            xml = Parser(build_file)
-            builds = json.loads(xml.get_list2())['builds']
-    else:
-        response = get_page(buildfile)
-        if '"builds"' in response or "'builds'" in response:
-            builds = json.loads(response)['builds']
-           
-        elif '<name>' in response:
-            xml = XmlParser(response)
-            builds = xml.parse_builds()
+    response = get_page(buildfile)
         
-        elif 'name=' in response:
-            text = TextParser(response)
-            builds = text.parse_builds()
+    if '"name":' in response or "'name':" in response:
+        builds = json.loads(response)['builds']
+    
+    elif '<name>' in response:
+        xml = XmlParser(response)
+        builds = xml.parse_builds()
+    
+    elif 'name=' in response:
+        text = TextParser(response)
+        builds = text.parse_builds()
             
     for build in builds:
         name = (build.get('name', local_string(30018)))  # Unknown Name
         version = (build.get('version', '0'))
         url = (build.get('url', ''))
+        if url.startswith('https://www.dropbox.com'):
+            url = url.replace('dl=0', 'dl=1')
         icon = (build.get('icon', addon_icon))
         fanart = (build.get('fanart', addon_fanart))
         description = (build.get('description', local_string(30019)))  # No Description Available.
         preview = (build.get('preview',None))
         
-        if url.endswith('.xml') or url.endswith('.json'):
+        if url.endswith('.xml') or url.endswith('.json') or url.endswith('.txt'):
             add_dir(COLOR2(name),url,1,icon,fanart,COLOR2(description),name2=name,version=version,isFolder=True)
-        add_dir(COLOR2(f'{name} {local_string(30020)} {version}'), url, 3, icon, fanart, description, name2=name, version=version, isFolder=False)  # Version
+        else:
+            add_dir(COLOR2(f'{name} {local_string(30020)} {version}'), url, 3, icon, fanart, description, name2=name, version=version, isFolder=False)  # Version
         if preview not in (None, '', 'http://', 'https://'):
             add_dir(COLOR1(local_string(30021) + ' ' + name + ' ' + local_string(30020) + ' ' + version), preview, 2, icon, fanart, COLOR2(description), name2=name, version=version, isFolder=False)  # Video Preview
 
@@ -109,8 +104,8 @@ def restore_gui_skin():
 
 def authorize_menu():  ### deprecated use authorize.py methods
     xbmcplugin.setPluginCategory(HANDLE, local_string(30027))  # Authorize Services
-    p = Parser(authorize)
-    builds = json.loads(p.get_list())['items']
+    response = get_page(authorize)
+    builds = json.loads(response)['items']
     for build in builds:
         name = (build.get('name', 'Unknown'))
         url = (build.get('url', ''))
